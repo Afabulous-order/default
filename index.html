@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-FABulous</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="panel">
+        <h1><img src="./assets/logo.png" alt="Logo">-FABulous</h1>
+        <table>
+            <tr>
+                <th colspan="3">Place your order here</th>
+            </tr>
+            <tr>
+                <td>Prefabs</td>
+                <td>PPU</td>
+                <td>Quantity</td>
+            </tr>
+            <tr>
+                <td>ABH</td>
+                <td class="price">40000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>ADE</td>
+                <td class="price">40000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>ASE</td>
+                <td class="price">40000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>ATA</td>
+                <td class="price">40000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>PSL</td>
+                <td class="price">1200</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>MCG</td>
+                <td class="price">1000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>MHL</td>
+                <td class="price">1000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>TRU</td>
+                <td class="price">1000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>INS</td>
+                <td class="price">1000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>SEA</td>
+                <td class="price">1000</td>
+                <td class="wrap">
+                    <button type="button" class="minus"><img src="./assets/btn-minus.svg" alt="Remove"></button>
+                    <input type="number" min="0" placeholder="0" class="qty">
+                    <button type="button" class="plus"><img src="./assets/btn-plus.svg" alt="Add"></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Total cost</td>
+                <td id="total">Total</td>
+            </tr>
+            <tr>
+                <td id="dc" title="Discounted price. You can get up to 3%.
+Contact us if you don't know whether you're eligible.">Discount <b id="information">ⓘ</b></td>
+                <td><input type="number" min="0" max="3" id="dis_per" placeholder="0">%</td>
+                <td id="discount">Discount</td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
