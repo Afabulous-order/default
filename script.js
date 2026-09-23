@@ -46,6 +46,7 @@ discount.addEventListener("blur", (event) => {
         value = 3
     }
     event.target.value = value
+    CountTotal();
 });
 
 
