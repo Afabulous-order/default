@@ -56,7 +56,6 @@ function CountTotal() {
     for (let i = 0; i < id.length; i++) {
         total += Number(id[i].textContent) * Number(qty[i].value)
     }
-    document.querySelector("#total").textContent = total
     let discount = Number(document.querySelector("#dis_per").value)
-    document.querySelector("#discount").textContent = Math.round(total * (100-discount)/100)
+    document.querySelector("#total").textContent = Math.round(total * (100-discount)/100)
 }
