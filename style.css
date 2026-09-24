@@ -146,6 +146,8 @@ tr:last-child td {
 tr th:first-child,
 tr td:first-child {
   border-left: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 tr th:last-child,
