@@ -1,10 +1,11 @@
-
+//lists
 const id = document.querySelectorAll(".price");
 const qty = document.querySelectorAll(".qty");
 const discount = document.querySelector("#dis_per");
 const minus = document.querySelectorAll(".minus");
 const plus = document.querySelectorAll(".plus")
 
+//Load from URL
 const params = new URLSearchParams(window.location.search)
 document.querySelector("#dis_per").value = params.get("Disc")
 qty.forEach(element => {
@@ -17,7 +18,7 @@ qty.forEach(element => {
 });
 CountTotal();
 
-
+//Input
 qty.forEach(element => {
     element.addEventListener("input", CountTotal);
     element.addEventListener("blur", (event) => {
@@ -29,6 +30,8 @@ qty.forEach(element => {
         CountTotal()
     });
 });
+
+//Plus and minus button
 plus.forEach(element => {
     element.addEventListener("click", (event) => {
         const cl_input = event.target.closest(".wrap");
@@ -48,6 +51,7 @@ minus.forEach(element => {
     });
 });
 
+//Discount
 discount.addEventListener("input", CountTotal)
 discount.addEventListener("blur", (event) => {
     let value = Number(event.target.value)
@@ -63,6 +67,7 @@ discount.addEventListener("blur", (event) => {
     CountTotal();
 });
 
+//Functions
 function CountTotal() {
     let total = 0
     for (let i = 0; i < id.length; i++) {
