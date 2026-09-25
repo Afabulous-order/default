@@ -4,6 +4,7 @@ const qty = document.querySelectorAll(".qty");
 const discount = document.querySelector("#dis_per");
 const minus = document.querySelectorAll(".minus");
 const plus = document.querySelectorAll(".plus")
+const currency = document.querySelectorAll(".currency")
 
 //Load from URL
 const params = new URLSearchParams(window.location.search)
@@ -29,6 +30,10 @@ qty.forEach(element => {
         event.target.value = value
         CountTotal()
     });
+});
+//Currency
+currency.forEach(element => {
+    element.addEventListener("input", WriteUrl)
 });
 
 //Plus and minus button
@@ -85,6 +90,11 @@ function WriteUrl() {
         if (element.value != 0)
         {
             url.set(name, element.value)
+        }
+    });
+    currency.forEach(element => {
+        if(element.checked == true){
+            url.set(String(element.id), String(element.checked))
         }
     });
     const disc = Number(document.querySelector("#dis_per").value);
