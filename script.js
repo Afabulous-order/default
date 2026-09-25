@@ -4,6 +4,19 @@ const qty = document.querySelectorAll(".qty");
 const discount = document.querySelector("#dis_per");
 const minus = document.querySelectorAll(".minus");
 const plus = document.querySelectorAll(".plus")
+
+const params = new URLSearchParams(window.location.search)
+qty.forEach(element => {
+    const mat = element.closest("tr").querySelector("td").textContent;
+    const mat_value = params.get(mat);
+    if (mat_value !== null)
+    {
+        element.value = mat_value;
+    }
+});
+CountTotal();
+
+
 qty.forEach(element => {
     element.addEventListener("input", CountTotal);
     element.addEventListener("blur", (event) => {
@@ -49,8 +62,6 @@ discount.addEventListener("blur", (event) => {
     CountTotal();
 });
 
-
-
 function CountTotal() {
     let total = 0
     for (let i = 0; i < id.length; i++) {
@@ -58,4 +69,17 @@ function CountTotal() {
     }
     let discount = Number(document.querySelector("#dis_per").value)
     document.querySelector("#total").textContent = Math.round(total * (100-discount)/100)
+    WriteUrl()
+}
+
+function WriteUrl() {
+    let url = new URLSearchParams
+    qty.forEach(element => {
+        let name = element.closest("tr").querySelector("td").textContent
+        if (element.value != 0)
+        {
+            url.set(name, element.value)
+        }
+    });
+    history.replaceState(null, "", "?" + url.toString());
 }
