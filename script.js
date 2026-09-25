@@ -5,6 +5,7 @@ const discount = document.querySelector("#dis_per");
 const minus = document.querySelectorAll(".minus");
 const plus = document.querySelectorAll(".plus")
 const currency = document.querySelectorAll(".currency")
+const currency_type = ["ncc","ica","cis"]
 
 //Load from URL
 const params = new URLSearchParams(window.location.search)
@@ -15,6 +16,12 @@ qty.forEach(element => {
     if (mat_value !== null)
     {
         element.value = mat_value;
+    }
+});
+currency_type.forEach(element => {
+    if (params.get(element) != null)
+    {
+        document.querySelector("#" + element).checked = true
     }
 });
 CountTotal();
@@ -33,7 +40,14 @@ qty.forEach(element => {
 });
 //Currency
 currency.forEach(element => {
-    element.addEventListener("input", WriteUrl)
+    element.addEventListener("input", (event) => {
+        currency.forEach(currency => {
+            if (String(currency.id) != String(event.target.id)) {
+                currency.checked = false;
+            }
+        });
+        WriteUrl()
+    });
 });
 
 //Plus and minus button
