@@ -46,7 +46,8 @@ h1 img{
     width: 100px;
     vertical-align: text-bottom;
     margin-right: -10px;
-
+    color-scheme: light !important;
+    filter: none !important;
 }
 
 td, th{

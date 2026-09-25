@@ -6,6 +6,7 @@ const minus = document.querySelectorAll(".minus");
 const plus = document.querySelectorAll(".plus")
 
 const params = new URLSearchParams(window.location.search)
+document.querySelector("#dis_per").value = params.get("Disc")
 qty.forEach(element => {
     const mat = element.closest("tr").querySelector("td").textContent;
     const mat_value = params.get(mat);
@@ -81,5 +82,9 @@ function WriteUrl() {
             url.set(name, element.value)
         }
     });
+    const disc = Number(document.querySelector("#dis_per").value);
+    if (disc != 0) {
+        url.set("Disc", disc)
+    }
     history.replaceState(null, "", "?" + url.toString());
 }
