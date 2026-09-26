@@ -78,9 +78,9 @@ discount.addEventListener("blur", (event) => {
     {
         value = 0
     }
-    else if (value > 3)
+    else if (value > 5)
     {
-        value = 3
+        value = 5
     }
     event.target.value = value
     CountTotal();
