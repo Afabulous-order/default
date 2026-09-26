@@ -88,7 +88,7 @@ input {
 }
 
 #dis_per{
-    width: 40px;
+    width: 60px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

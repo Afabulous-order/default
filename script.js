@@ -90,7 +90,9 @@ discount.addEventListener("blur", (event) => {
 function CountTotal() {
     let total = 0
     for (let i = 0; i < id.length; i++) {
-        total += Number(id[i].textContent) * Number(qty[i].value)
+        if (!isNaN(id[i].textContent)){
+            total += Number(id[i].textContent) * Number(qty[i].value)
+        }
     }
     let discount = Number(document.querySelector("#dis_per").value)
     document.querySelector("#total").textContent = Math.round(total * (100-discount)/100)
