@@ -38,6 +38,7 @@ qty.forEach(element => {
         CountTotal()
     });
 });
+
 //Currency
 currency.forEach(element => {
     element.addEventListener("input", (event) => {
