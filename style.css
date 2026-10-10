@@ -2,6 +2,13 @@
   .table-wrap {
     flex-direction: column;
   }
+  body {
+    font-size: 15;
+  }
+
+  input[type="checkbox"] {
+    width: 70px;
+  }
 }
 
 body{
