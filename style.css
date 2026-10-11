@@ -1,14 +1,18 @@
 @media (max-width: 768px) {
-  .table-wrap {
+    .table-wrap {
     flex-direction: column;
-  }
-  body {
+    }
+    body {
     font-size: 15;
-  }
+    }
 
-  input[type="checkbox"] {
-    width: 70px;
-  }
+    input[type="checkbox"] {
+    width: 50px;
+    }
+
+    input {
+        width: 80px;
+    }
 }
 
 body{
