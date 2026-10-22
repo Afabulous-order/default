@@ -96,7 +96,7 @@ function CountTotal() {
         }
     }
     let discount = Number(document.querySelector("#dis_per").value)
-    document.querySelector("#total").textContent = Math.round(total * (100-discount)/100)
+    document.querySelector("#total").textContent = Math.round(total * (100-discount)/100).toLocaleString("hu-HU")
     WriteUrl()
 }
 
