@@ -75,14 +75,17 @@ minus.forEach(element => {
 discount.addEventListener("input", CountTotal)
 discount.addEventListener("blur", (event) => {
     let value = Number(event.target.value)
-    if (value < 0)
-    {
-        value = 0
-    }
-    else if (value > 5)
-    {
-        value = 5
-    }
+    if (value == 10)
+        value = 10
+    else
+        if (value < 0)
+        {
+            value = 0
+        }
+        else if (value > 5)
+        {
+            value = 5
+        }
     event.target.value = value
     CountTotal();
 });
