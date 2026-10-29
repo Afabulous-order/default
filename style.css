@@ -63,6 +63,7 @@ td, th{
     border: 1px solid orange;
     border-collapse: collapse;
     padding: 5px 0px;
+    position: relative;
 }
 
 #information{
