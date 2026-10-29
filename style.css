@@ -154,6 +154,19 @@ input[type="checkbox"] {
 .price{
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
+}
+
+.discount-badge {
+  position: absolute;
+  top: -6px;
+  right: 2px;
+  background: #f5a623;
+  color: #1a1a1a;
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 4px;
 }
 
 #dc{
